@@ -1,4 +1,7 @@
-:root {
+
+.centeredCard {
+  margin-inline: auto;
+}:root {
   --bg: #0b0f19;
   --panel: #111827;
   --text: #e5e7eb;
@@ -32,51 +35,6 @@ body {
 }
 
 img { max-width: 100%; height: auto; display: block; border-radius: 12px; margin-inline: auto; }
-
-/* Sección con fondo borroso */
-.blur-section {
-  position: relative;
-  padding: 60px 40px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin: 40px auto;
-}
-
-.blur-section::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
-  filter: blur(40px) brightness(0.4);
-  z-index: -1;
-}
-
-.blur-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(17,24,39,0.7), rgba(11,15,25,0.8));
-  z-index: 0;
-}
-
-.blur-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.blur-content img {
-  max-width: 80%;
-  border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  border: 2px solid rgba(255,255,255,0.1);
-}
 
 .container { width: min(1100px, 92%); margin: 0 auto; max-width: 100%; }
 
@@ -158,4 +116,20 @@ a.inline:hover { text-decoration: underline; }
 .section .grid.cards {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+cardsContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10vh;
+}
+  
+  .cardsSubContainer {
+    display: flex;
+    gap: 5vh;
+}
+
+.centeredCard {
+  margin-inline: auto;
 }
