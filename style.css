@@ -1,0 +1,161 @@
+:root {
+  --bg: #0b0f19;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #7c3aed;
+  --primary-700: #6d28d9;
+  --secondary: #06b6d4;
+  --accent: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --radius: 14px;
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.35);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.25);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(124,58,237,0.25), transparent 50%),
+              radial-gradient(900px 600px at 110% 10%, rgba(6,182,212,0.18), transparent 50%),
+              var(--bg);
+  line-height: 1.6;
+  text-align: center;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+img { max-width: 100%; height: auto; display: block; border-radius: 12px; margin-inline: auto; }
+
+/* Sección con fondo borroso */
+.blur-section {
+  position: relative;
+  padding: 60px 40px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+.blur-section::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
+  filter: blur(40px) brightness(0.4);
+  z-index: -1;
+}
+
+.blur-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(17,24,39,0.7), rgba(11,15,25,0.8));
+  z-index: 0;
+}
+
+.blur-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.blur-content img {
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.container { width: min(1100px, 92%); margin: 0 auto; max-width: 100%; }
+
+.header {
+  position: sticky; top: 0; z-index: 1000;
+  backdrop-filter: saturate(1.3) blur(10px);
+  background: linear-gradient(180deg, rgba(17,24,39,0.85), rgba(17,24,39,0.65));
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 0; }
+
+.brand { display: inline-flex; gap: 10px; align-items: center; color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.4px; }
+.brand-logo { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: var(--shadow-sm); }
+
+.nav-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.nav-links a { color: var(--text); text-decoration: none; padding: 10px 14px; border-radius: 10px; transition: all 180ms ease; border: 1px solid transparent; }
+.nav-links a:hover { color: #fff; border-color: rgba(255,255,255,0.1); background: rgba(124,58,237,0.12); transform: translateY(-1px); }
+
+h1, h2, h3, h4, p { text-align: center; }
+
+.hero { padding: 64px 0 28px; }
+.page-title { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 0 0 10px; }
+.lead { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); margin: 0 0 10px; }
+
+.section { margin: 28px 0 64px; }
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); box-shadow: var(--shadow-md); overflow: hidden; text-align: center; margin-inline: auto; }
+.card-body { padding: 20px; text-align: center; }
+
+ul, ol { list-style-position: inside; padding-left: 0; margin-left: 0; text-align: center; }
+
+/* GRID CENTRADO */
+.grid { display: grid; gap: 18px; justify-items: center; align-items: start; max-width: 100%; margin-inline: auto; justify-content: center; }
+.grid-2 { grid-template-columns: 1fr; width: 100%; }
+@media (min-width: 880px) { .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: center; } }
+
+/* Centered card grid with fixed max column width */
+/* Centered card grid with fixed min width and responsive behavior */
+/* Centrado forzado para tarjetas de lenguajes */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 8px;
+  margin: 0 auto; /* ⬅️ ¡FORZAR CENTRADO! */
+}
+
+/* Narrow card utility for single-column centered blocks */
+.card.narrow { max-width: 860px; margin-inline: auto; }
+
+.tag { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); color: var(--muted); font-size: 12px; }
+
+.button { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; color: #fff; text-decoration: none; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: var(--shadow-md); transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(124,58,237,0.35); filter: brightness(1.05); }
+
+footer { padding: 44px 0 64px; color: var(--muted); text-align: center; }
+
+pre { margin: 0; padding: 18px; background: #0c1220; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: auto; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; color: #e6e6e6; }
+
+.reveal { opacity: 0; transform: translateY(14px); }
+.reveal.visible { opacity: 1; transform: none; transition: all 600ms cubic-bezier(.2,.6,.2,1); }
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-2 { margin-top: 12px; }
+.mb-2 { margin-bottom: 12px; }
+.mt-4 { margin-top: 24px; }
+.mb-4 { margin-bottom: 24px; }
+
+a.inline { color: var(--secondary); text-decoration: none; }
+a.inline:hover { text-decoration: underline; }
+
+.icon { width: 20px; height: 20px; vertical-align: middle; margin-right: 8px; border-radius: 4px; display: inline-block; }
+
+/* Seguro: fuerza centrado en todas las pantallas */
+.section .grid.cards {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

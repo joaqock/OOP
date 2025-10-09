@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejemplos en C# • POO</title>
+	<meta name="description" content="Ejemplo práctico de clases y objetos en C# aplicando POO.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a href="index.html" class="brand">
+				<span class="brand-logo" aria-hidden="true"></span>
+				<span>POO • Intro</span>
+			</a>
+			<nav class="nav-links" aria-label="Principal">
+				<a href="que-es-poo.html">¿Qué es POO?</a>
+				<a href="caracteristicas.html">Características</a>
+				<a href="ventajas-desventajas.html">Ventajas/Desventajas</a>
+				<a href="lenguajes.html">Lenguajes</a>
+				<a href="ejemplos-csharp.html" aria-current="page">Ejemplos en C#</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero container">
+			<h1 class="page-title">Ejemplo práctico en C#</h1>
+			<p class="lead">Clases, herencia y polimorfismo modelando una biblioteca.</p>
+		</section>
+
+		<section class="section container reveal">
+			<div class="card card-body narrow">
+				<h3 class="mt-0">Escenario</h3>
+				<p>Modelamos una biblioteca con una clase base <strong>Publicacion</strong> y dos derivadas: <strong>Libro</strong> y <strong>Revista</strong>. Mostramos polimorfismo sobrescribiendo <code>GetDescripcion()</code>.</p>
+			</div>
+		</section>
+
+		<section class="section container reveal">
+			<div class="grid" style="justify-content: center;">
+				<div class="card card-body narrow">
+					<pre><code>// Ejemplo en C#
+using System;
+using System.Collections.Generic;
+
+abstract class Publicacion
+{
+    public string Titulo { get; }
+    public string Autor { get; }
+
+    protected Publicacion(string titulo, string autor)
+    {
+        Titulo = titulo;
+        Autor = autor;
+    }
+
+    public abstract string GetDescripcion();
+}
+
+class Libro : Publicacion
+{
+    public int Paginas { get; }
+
+    public Libro(string titulo, string autor, int paginas) : base(titulo, autor)
+    {
+        Paginas = paginas;
+    }
+
+    public override string GetDescripcion()
+    {
+        return $"Libro: '{Titulo}' de {Autor} ({Paginas} páginas)";
+    }
+}
+
+class Revista : Publicacion
+{
+    public int Numero { get; }
+
+    public Revista(string titulo, string autor, int numero) : base(titulo, autor)
+    {
+        Numero = numero;
+    }
+
+    public override string GetDescripcion()
+    {
+        return $"Revista: '{Titulo}' edición #{Numero}, editor {Autor}";
+    }
+}
+
+class Programa
+{
+    static void Main()
+    {
+        var catalogo = new List<Publicacion>
+        {
+            new Libro("El Quijote", "Cervantes", 863),
+            new Revista("TechToday", "Acme Media", 142)
+        };
+
+        foreach (var pub in catalogo)
+        {
+            Console.WriteLine(pub.GetDescripcion());
+        }
+    }
+}
+</code></pre>
+				</div>
+			</div>
+		</section>
+
+		<section class="section container reveal">
+			<img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=1400&auto=format&fit=crop" alt="Estantería de biblioteca representando el dominio del ejemplo" />
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">POO • C#</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
