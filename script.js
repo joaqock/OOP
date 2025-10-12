@@ -1,4 +1,3 @@
-// Smooth scroll for same-page anchors
 (function() {
   function isSamePageLink(a) {
     return a.hash && (a.origin + a.pathname === window.location.origin + window.location.pathname);
@@ -16,7 +15,6 @@
   });
 })();
 
-// Scroll reveal animation
 (function() {
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -28,7 +26,6 @@
   els.forEach(el => observer.observe(el));
 })();
 
-// Interactive hover sparkles for buttons (lightweight)
 (function() {
   const buttons = document.querySelectorAll('.button');
   buttons.forEach(btn => {

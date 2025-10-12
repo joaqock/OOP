@@ -31,7 +31,7 @@ body {
               var(--bg);
   line-height: 1.6;
   text-align: center;
-  overflow-x: hidden; /* evita scroll horizontal */
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; display: block; border-radius: 12px; margin-inline: auto; }
@@ -66,14 +66,10 @@ h1, h2, h3, h4, p { text-align: center; }
 
 ul, ol { list-style-position: inside; padding-left: 0; margin-left: 0; text-align: center; }
 
-/* GRID CENTRADO */
 .grid { display: grid; gap: 18px; justify-items: center; align-items: start; max-width: 100%; margin-inline: auto; justify-content: center; }
 .grid-2 { grid-template-columns: 1fr; width: 100%; }
 @media (min-width: 880px) { .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: center; } }
 
-/* Centered card grid with fixed max column width */
-/* Centered card grid with fixed min width and responsive behavior */
-/* Centrado forzado para tarjetas de lenguajes */
 .grid.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -81,10 +77,9 @@ ul, ol { list-style-position: inside; padding-left: 0; margin-left: 0; text-alig
   justify-content: center;
   width: 100%;
   padding: 0 8px;
-  margin: 0 auto; /* ⬅️ ¡FORZAR CENTRADO! */
+  margin: 0 auto;
 }
 
-/* Narrow card utility for single-column centered blocks */
 .card.narrow { max-width: 860px; margin-inline: auto; }
 
 .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); color: var(--muted); font-size: 12px; }
@@ -112,7 +107,6 @@ a.inline:hover { text-decoration: underline; }
 
 .icon { width: 20px; height: 20px; vertical-align: middle; margin-right: 8px; border-radius: 4px; display: inline-block; }
 
-/* Seguro: fuerza centrado en todas las pantallas */
 .section .grid.cards {
   margin-left: auto !important;
   margin-right: auto !important;
