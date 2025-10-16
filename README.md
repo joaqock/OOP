@@ -2,7 +2,7 @@
 
 This project is an informative web page, aimed at explaining in a clear and practical way the fundamental concepts of **Object-Oriented Programming (OOP)**.
 
-🔗 **Live Demo:** [antonino-oop.netlify.app](https://antonino-oop.netlify.app)
+🔗 **Live Demo:** [antonino-oop.netlify.app](https://oop-guide.netlify.app)
 
 ---
 
