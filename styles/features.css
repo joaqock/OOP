@@ -1,42 +1,6 @@
-.blur-section {
-  position: relative;
-  padding: 60px 40px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin: 40px auto;
-}
-
-.blur-section::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
-  filter: blur(40px) brightness(0.4);
-  z-index: -1;
-}
-
-.blur-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(17,24,39,0.7), rgba(11,15,25,0.8));
-  z-index: 0;
-}
-
-.blur-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.blur-content img {
-  max-width: 80%;
+.features img {
+  width: auto;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   border: 2px solid rgba(255,255,255,0.1);
