@@ -1,6 +1,16 @@
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.features {
+  max-width: 900px;
+  margin: 0 auto 64px;
+}
+
 .features img {
-  width: 1000px;
-  border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  border: 2px solid rgba(255,255,255,0.1);
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
 }
