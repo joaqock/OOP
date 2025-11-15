@@ -29,8 +29,3 @@ This project is an informative web page, aimed at explaining in a clear and prac
 The goal of this project is to **reinforce the fundamentals of Object-Oriented Programming** through hands-on practice, combining theory and web development.  
 
 ---
-
-## 🧑‍💻 Author
-Developed by **Joaquín Antonino**.
-
----
