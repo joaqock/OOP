@@ -1,7 +1,5 @@
 # 🧠 Project: Object-Oriented Programming (OOP)
 
-![Preview del proyecto](./assets/preview.png)
-
 This project is an informative web page, aimed at explaining in a clear and practical way the fundamental concepts of **Object-Oriented Programming (OOP)**.
 
 🔗 **Live Demo:** [oop-guide.netlify.app](https://oop-guide.netlify.app)
