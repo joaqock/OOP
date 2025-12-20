@@ -1,7 +1,6 @@
-/* Cards y grid responsive */
 .grid {
   display: grid;
-  grid-template-columns: 1fr; /* 1 columna por defecto */
+  grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
 }
@@ -15,9 +14,9 @@
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 12px;
   box-shadow: var(--shadow-md);
-  width: 100%;           /* ocupa todo el ancho de la card */
-  overflow-x: auto;      /* scroll solo si hace falta */
-  white-space: pre-wrap; /* rompe líneas largas */
+  width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
   word-wrap: break-word;
   font-size: 14px;
   line-height: 1.5;
@@ -33,7 +32,6 @@
   text-align: center;
 }
 
-/* Imagen responsive */
 .section img {
   width: 100%;
   height: auto;
@@ -42,14 +40,12 @@
   margin: 0 auto;
 }
 
-/* Contenedor general */
 .section.container {
   padding: 0 20px;
   margin: 20px auto;
   max-width: 1200px;
 }
 
-/* Media queries */
 @media (max-width: 768px) {
   .card pre {
     font-size: 12px;

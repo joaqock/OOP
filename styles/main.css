@@ -50,8 +50,6 @@ img {
   max-width: 100%;
 }
 
-/* HEADER / NAV */
-
 .header {
   position: sticky;
   top: 0;
@@ -111,8 +109,6 @@ img {
   transform: translateY(-1px);
 }
 
-/* TIPOGRAFÍA */
-
 h1,
 h2,
 h3,
@@ -131,8 +127,6 @@ h4 {
 p {
   margin: 0 0 10px;
 }
-
-/* HERO / SECCIONES */
 
 .hero {
   padding: 64px 0 28px;
@@ -154,8 +148,6 @@ p {
   margin: 28px 0 64px;
 }
 
-/* CARDS / GRID */
-
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.08);
@@ -171,7 +163,6 @@ p {
   text-align: center;
 }
 
-/* Títulos dentro de cards */
 .card-body h2 {
   margin-top: 12px;
 }
@@ -180,7 +171,6 @@ p {
   margin-top: 0;
 }
 
-/* Contenedor de CTA en cards */
 .card-actions {
   margin-top: 24px;
 }
@@ -248,8 +238,6 @@ ol {
   font-size: 12px;
 }
 
-/* BOTÓN */
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -272,15 +260,11 @@ ol {
   filter: brightness(1.05);
 }
 
-/* FOOTER */
-
 footer {
   padding: 44px 0 64px;
   color: var(--muted);
   text-align: center;
 }
-
-/* CÓDIGO */
 
 pre {
   margin: 0;
@@ -297,8 +281,6 @@ code {
   color: #e6e6e6;
 }
 
-/* ANIMACIONES SCROLL */
-
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -310,8 +292,6 @@ code {
   transition: all 600ms cubic-bezier(.2,.6,.2,1);
 }
 
-/* LINKS INLINE */
-
 a.inline {
   color: var(--secondary);
   text-decoration: none;
@@ -320,8 +300,6 @@ a.inline {
 a.inline:hover {
   text-decoration: underline;
 }
-
-/* ICONOS */
 
 .icon {
   width: 20px;
